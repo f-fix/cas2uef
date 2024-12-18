@@ -39,9 +39,11 @@ def cas2uef(infn, outfn):
 
    It also inserts a dummy block at the beginning of the UEF to work
    around a bug in old BBC OS versions, as is standard practice. The
-   resulting UEF is version 0.10 This technique also allows you to
-   hash the CAS file for software version identification purposes,
-   which is not really possible with UEF in general.
+   resulting UEF is version 0.10
+
+   This technique also allows you to hash the CAS file for software
+   version identification purposes, which is not really possible with
+   UEF in general.
 
    '''
 
