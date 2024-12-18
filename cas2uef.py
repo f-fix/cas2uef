@@ -19,7 +19,8 @@ def cas2uef(infn, outfn):
    It is intended specifically for use with CAS from DumpListEditor,
    which are "compact", i.e. they never insert padding NUL bytes
    between blocks and do not try to align blocks with 8-byte
-   boundaries.
+   boundaries. It also expects the CAS file to fully preserve the
+   block boundaries present in the cassette audio.
 
    Thanks to this conversion, you can use the much larger and more
    fault-tolerant library of MSX CAS conversion tools to convert your
