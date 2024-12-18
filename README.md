@@ -18,4 +18,6 @@ Thanks to this conversion, you can use the much larger and more fault-tolerant l
 
 The resulting UEF is of course the opposite of audio-archival quality: all the timings are default ones, since the CAS does not record any timing information. The Python script looks for file header-looking bytes at the beginnings of blocks and inserts extra pauses when it sees a file header transition. This is a heuristic!
 
-It also inserts a dummy block at the beginning of the UEF to work around a bug in old BBC OS versions, as is standard practice. The resulting UEF is version 0.10 This technique also allows you to hash the CAS file for software version identification purposes, which is not really possible with UEF in general.
+It also inserts a dummy block at the beginning of the UEF to work around a bug in old BBC OS versions, as is standard practice. The resulting UEF is version 0.10
+
+This technique also allows you to hash the CAS file for software version identification purposes, which is not really possible with UEF in general.
