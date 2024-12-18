@@ -7,12 +7,12 @@ Written in Python 3 with minimal library dependencies
 ```bash
 python3 cas2uef.py -i infn -o outfn
 ```
-`cas2uef` converts MSX CAS into BBC Model B UEF that appears to work in [BeebEm](http://www.mkw.me.uk/beebem/). Give it an input filename `infn` and an output filename `outfn`, and it will read "compact" MSX-style CAS from infn and write UEF to outfn, clobbering any existing file with that name. It likely only works with well-behaved tapes that do not do anything strange in terms of encoding.
+`cas2uef` converts MSX CAS into BBC Model B UEF that appears to work in [BeebEm](http://www.mkw.me.uk/beebem/). Give it an input filename `infn` and an output filename `outfn`, and it will read "compact" MSX-style CAS from `infn` and write UEF to `outfn`, clobbering any existing file with that name. It likely only works with well-behaved tapes that do not do anything strange in terms of encoding.
 
 - UEF format specs: https://mdfs.net/Docs/Comp/BBC/FileFormat/UEFSpecs.htm
 - CAS format specs: (ignore all the bits about file types and alignment) https://www.msx.org/forum/semi-msx-talk/emulation/how-do-exactly-works-cas-format
 
-It is intended specifically for use with CAS from [DumpListEditor](https://bugfire2009.ojaru.jp/download.html#dleditor), which are "compact", i.e. they never insert padding NUL bytes between blocks and do not try to align blocks with 8-byte boundaries.
+It is intended specifically for use with CAS from [DumpListEditor](https://bugfire2009.ojaru.jp/download.html#dleditor), which are "compact", i.e. they never insert padding NUL bytes between blocks and do not try to align blocks with 8-byte boundaries. It also expects the CAS file to fully preserve the block boundaries present in the cassette audio.
 
 Thanks to this conversion, you can use the much larger and more fault-tolerant library of MSX CAS conversion tools to convert your waveforms into CAS, and than use this tool to convert the CAS into UEF. Note that the CAS this handles is the kind with block headers (as used by openMSX and other modern MSX emulators) and without extra padding/alignment at the start of blocks (this is what the emulators support, but many CAS generation tools put extra padding NUL bytes before the second and subsequent blocks to align them to 8-byte boundaries in the file)
 
