@@ -7,7 +7,7 @@ Written in Python 3 with minimal library dependencies
 ```bash
 python3 cas2uef.py -i infn -o outfn
 ```
-`cas2uef` converts MSX CAS into BBC Model B UEF that appears to work in BeebEm. Give it an input filename `infn` and an output filename `outfn`, and it will read "compact" MSX-style CAS from infn and write UEF to outfn, clobbering any existing file with that name. It likely only works with well-behaved tapes that do not do anything strange in terms of encoding.
+`cas2uef` converts MSX CAS into BBC Model B UEF that appears to work in [BeebEm](http://www.mkw.me.uk/beebem/). Give it an input filename `infn` and an output filename `outfn`, and it will read "compact" MSX-style CAS from infn and write UEF to outfn, clobbering any existing file with that name. It likely only works with well-behaved tapes that do not do anything strange in terms of encoding.
 
 - UEF format specs: https://mdfs.net/Docs/Comp/BBC/FileFormat/UEFSpecs.htm
 - CAS format specs: (ignore all the bits about file types and alignment) https://www.msx.org/forum/semi-msx-talk/emulation/how-do-exactly-works-cas-format
